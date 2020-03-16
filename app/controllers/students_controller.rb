@@ -7,16 +7,15 @@ class StudentsController < ApplicationController
         @student = Student.new
     end
 
-    # def create
-    #     @user = User.new(user_params)
-    #     if @user.save
-    #         session[:user_id] = @user.id
-    #         flash[:success] = "Welcome to the Alpha Blog #{@user.username}"
-    #         redirect_to user_path(@user)
-    #     else
-    #         render 'new'
-    #     end
-    # end
+    def create
+        @student = Student.new(student_params)
+        if @student.save
+            flash[:success] = "You have successfully signed up #{@student.name}"
+            redirect_to root_path
+        else
+            render 'new'
+        end
+    end
 
     # def edit
     # end
@@ -41,7 +40,7 @@ class StudentsController < ApplicationController
     #     redirect_to users_path
     # end
 
-    # private
+    private
 
     # def set_user
     #      @user = User.find(params[:id])
@@ -55,7 +54,7 @@ class StudentsController < ApplicationController
     # end
 
     def student_params
-        params.require(:Student).permit( :name, :email )
+        params.require(:student).permit(:name, :email)
     end
 
     # def require_same_user

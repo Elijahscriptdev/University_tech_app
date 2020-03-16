@@ -23,4 +23,7 @@ $(document).on('turbolinks:load', function(){
     $(document).ready(function () {
         $('.sidenav').sidenav();
     });
+
+    $('#fade-out-target').fadeOut(4000);
+    $('#fade-out-target1').fadeOut(8000);
 })
