@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>TechApp</title>
+    <title>TechClub</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,10 +11,13 @@
 </head>
 
 <body>
-    <%= link_to  "Home", root_path %>
-    <%= link_to  "About", about_path %>
-    <%= link_to  "New courses", courses_new_path %>
-    <%= yield %>
+    <%= render 'layouts/navigation' %>
+
+    <main class="container">
+        <%= yield %>
+    </main>
+
+    <%= render 'layouts/footer' %>
 </body>
 
 </html>

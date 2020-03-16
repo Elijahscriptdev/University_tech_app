@@ -1,11 +1,26 @@
-<h1>Course Listing</h1>
-<ul>
-    <li>Code: Cs111</li>
-    <li>Name: Intro to Computer Science</li>
-    <li>Description: A thorough intro to Computer Science</li>
-</ul>
-<ul>
-    <li>Code: Cs111</li>
-    <li>Name: Intro to Computer Science</li>
-    <li>Description: A thorough intro to Computer Science</li>
-</ul>
+<div class='row'>
+    <div class='col s12'>
+        <h1 class='center-align'>Course Listing</h1>
+    </div>
+</div>
+
+<div class="row">
+    <% @courses.each do |course| %>
+    <div class="col s12 m6 ">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    <%= course.short_name %>: <%= course.name %>
+                </span>
+                <p>
+                    <%= course.description %>
+                </p>
+            </div>
+            <div class="card-action">
+                <a href="#">ENROL</a>
+                <a href="#">INFO</a>
+            </div>
+        </div>
+    </div>
+    <% end %>
+</div>
