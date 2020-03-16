@@ -1,4 +1,6 @@
 class StudentsController < ApplicationController
+    before_action :set_student, only: [:show, :edit, :update]
+
     def index
         @students = Student.all
     end
@@ -11,56 +13,34 @@ class StudentsController < ApplicationController
         @student = Student.new(student_params)
         if @student.save
             flash[:success] = "You have successfully signed up #{@student.name}"
-            redirect_to root_path
+            redirect_to student_path(@student)
         else
             render 'new'
         end
     end
 
-    # def edit
-    # end
+    def edit
+    end
 
-    # def update
-    #     if @user.update(user_params)
-    #         flash[:success] = "Your Account was successfully edited"
-    #         redirect_to articles_path
-    #     else
-    #         render 'new'
-    #     end
-    # end
+    def update
+        if @student.update(student_params)
+            flash[:success] = "Your profile was successfully edited"
+            redirect_to student_path(@student)
+        else
+            render 'edit'
+        end
+    end
 
-    # def show
-    #     @user_articles =@user.articles.paginate(page: params[:page], per_page: 5)
-    # end
-
-    # def destroy
-    #     @user = User.find(params[:id])
-    #     @user.destroy
-    #     flash[:danger] = "User and Article was successfully deleted"
-    #     redirect_to users_path
-    # end
+    def show
+    end
 
     private
 
-    # def set_user
-    #      @user = User.find(params[:id])
-    # end
-
-    # def require_admin
-    #     if current_user != @user and !current_user.admin?
-    #         flash[:danger] = "Only admins canperform that action"
-    #     redirect_to root_path
-    #     end
-    # end
+    def set_student
+        @student = Student.find(params[:id])
+    end
 
     def student_params
         params.require(:student).permit(:name, :email)
     end
-
-    # def require_same_user
-    #     if current_user != @user and !current_user.admin?
-    #         flash[:danger] = "You can only edit your own information"
-    #     redirect_to root_path
-    #     end
-    # end
 end
