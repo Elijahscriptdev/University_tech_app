@@ -1,9 +1,13 @@
 @import "materialize";
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap');
+// @import url(https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
+
 
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Zilla Slab', serif;
   }
 
   main {
@@ -23,6 +27,28 @@ body {
     background-color: rgb(29, 28, 28)!important;
   }
 
+  .yellow {
+    padding: 30px;
+  }
+
+  .card {
+    margin-top: 30px!important;
+  }
+
+  .margin {
+    margin-top: 20px;
+  }
+
+  .bg {
+    background: transparentize($color: #000000, $amount: 0.5);
+    padding: 15px;
+  }
+
+  .card-title {
+    font-weight: bold;
+    background: transparentize($color: #000000, $amount: 0.5);
+  }
+
   /*
     colors used
     #D69314	(214,147,20)
@@ -40,7 +66,14 @@ body {
   // position: relative;
   .herotext {
     color:#fff;
-    h2 {font-size: 3em;}
+    h2 {
+    font-size: 3em;
+    font-weight: bold;
+    }
+    h3 {
+    font-size: 2em;
+    font-weight: bold;
+    }
     text-transform: uppercase;
 /*    position: absolute;*/
 /*    display: inline-block;*/
@@ -51,7 +84,7 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -50%);
 	}
   #first {
     // change duration here
@@ -106,12 +139,12 @@ body {
 
 @keyframes image {
   0% {
-    background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1586049741/kdj4vcwehk2cjtgtzsbc.jpg');
+    background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587666427/men-working-at-night-256219_tus5xy.jpg');
   }
-  100% {
+  60% {
     background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1586111318/fookuvdhwf7eqf3pfgim.jpg');
   }
-  200% {
+  100% {
     background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584497691/austin-distel-uPK2TbJlvMQ-unsplash_pfgwwg.jpg');
   }
 }

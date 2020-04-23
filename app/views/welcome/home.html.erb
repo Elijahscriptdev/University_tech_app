@@ -1,30 +1,126 @@
-<%# <!-- SECTION: PHOTO WITH TEXT AND BUTTON -->
-<section id="main-photo" class="text-center">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 lead photo-info ">
-                <h1 class=" font-weight-bold yellow-color">
-                    Novaly Programming School
-                </h1>
-                <h3 class="font-weight-bold green-color py-2 text-light text-center caption">
-                    A community of lifelong learners, responsible global citizens, and champions of our own success.
-                </h3>
-                <a href="#" class="btn yellow-background btn-lg">Contact</a>
+<div id="container" class="frame">
+    <div class="herotext bg" id="first">
+        <h3 class="center-align">Lets start your</h3>
+        <h2 class="center-align">Software Development carrier</h2>
+        <p class="center-align">How would yo like to get started?</p>
+        <p class="center-align"><a class="waves-effect waves-light btn ">Contact us now</a></p>
+    </div>
+    <div class="herotext bg" id="second">
+        <h3 class="center-align">Best Place For</h3>
+        <h2 class="center-align">Software Engineering</h2>
+        <p class="center-align">How would yo like to get started?</p>
+        <p class="center-align"><a class="waves-effect waves-light btn ">Contact us now</a></p>
+    </div>
+    <div class="herotext bg" id="third">
+        <h3 class="center-align">Lets start your</h3>
+        <h2 class="center-align">Software Development carrier</h2>
+        <p class="center-align">How would yo like to get started?</p>
+        <p class="center-align"><a class="waves-effect waves-light btn ">Contact us now</a></p>
+    </div>
+</div>
+<div class="center-align">
+    <h1>Our Courses</h1>
+</div>
+
+<div class="row">
+    <div class="col s12 m6 l4">
+        <div class="card hoverable">
+            <div class="card-image">
+                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587666843/woman-holds-blue-laptop-computer-while-sits-on-sofa-inside-1181267_mpyyvh.jpg">
+                <span class="card-title">Front-End Development</span>
+            </div>
+            <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
             </div>
         </div>
     </div>
-</section> %>
-<div id="container" class="frame">
-    <div class="herotext" id="first">
-        <h2>Ice</h2>
-        <p>Something something</p>
+    <div class="col s12 m6 l4">
+        <div class="card hoverable">
+            <div class="card-image">
+                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587666396/screen-coding-programming-web-design-2061168_twdw9f.jpg">
+                <span class="card-title">Back-End Development</span>
+            </div>
+            <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+            </div>
+        </div>
     </div>
-    <div class="herotext" id="second">
-        <h2>Cold</h2>
-        <p>Something something</p>
-    </div>
-    <div class="herotext" id="third">
-        <h2>Lemonade</h2>
-        <p>Something something</p>
+    <div class="col s12 m6 l4">
+        <div class="card hoverable">
+            <div class="card-image">
+                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587456958/vx16n09jafmbb10msb2x.jpg">
+                <span class="card-title">Fullstack Development</span>
+            </div>
+            <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+            </div>
+        </div>
     </div>
 </div>
+
+<!-- Location -->
+<div class="center-align ">
+    <h1>Location</h1>
+</div>
+<div class="container-fluid yellow lighten-5" id="location">
+
+    <%# <div class="col subtitle">Map</div> %>
+    <div class="row margin">
+        <div class="col m6 l6 s12">
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7112395536437!2d3.454792113812731!3d6.431128495347092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf506fbc6430b%3A0x626226e105c36107!2sOniru%20Estate%20Lekki!5e0!3m2!1sen!2sbr!4v1587671424224!5m2!1sen!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+
+
+        <div class="col m6 l6 s12">
+            <%# <div class="col s12 m12 l12 "> %>
+            <h4>Contact Us</h4>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12 m6 l6">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s12 m6 l6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Comments</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a class="waves-effect waves-light btn">Submit</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%# </div> %>
+<!-- End Location -->
+<%# </div> %>
+<!-- End Location -->
