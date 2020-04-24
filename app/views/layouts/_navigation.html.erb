@@ -1,26 +1,43 @@
     <header>
         <ul id="dropdown1" class="dropdown-content">
+
             <li>
                 <%= session_link %>
             </li>
+
             <% if logged_in? %>
             <li class="divider"></li>
             <li><%= link_to  "Profile", student_path(current_user) %></li>
+            <% else%>
+            <li>
+                <%= link_to "Signin", new_student_path %>
+            </li>
             <% end %>
+
         </ul>
 
         <ul id="dropdown2" class="dropdown-content">
             <li>
+                <%= link_to  "Home", root_path %>
+            </li>
+            <li>
                 <%= session_link %>
             </li>
             <% if logged_in? %>
             <li class="divider"></li>
             <li><%= link_to  "Profile", student_path(current_user) %></li>
+            <% else%>
+            <li>
+                <%= link_to "Signin", new_student_path %>
+            </li>
             <% end %>
         </ul>
 
         <ul class="sidenav" id="mobile-demo">
-            <li><%= link_to  "Courses", root_path %></li>
+            <li>
+                <%= link_to  "Home", root_path %>
+            </li>
+            <li><%= link_to  "Courses", courses_path %></li>
             <% if logged_in? %>
             <li><%= link_to  "Students", students_path %></li>
             <% end %>
@@ -33,6 +50,9 @@
                 <%= link_to  "Tech Club", root_path, class: "brand-logo right"  %>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li>
+                        <%= link_to  "Home", root_path %>
+                    </li>
                     <li><%= link_to  "Courses", courses_path %></li>
                     <% if logged_in? %>
                     <li><%= link_to  "Students", students_path %></li>
