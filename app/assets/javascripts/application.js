@@ -26,4 +26,16 @@ $(document).on('turbolinks:load', function(){
 
     $('#fade-out-target').fadeOut(4000);
     $('#fade-out-target1').fadeOut(8000);
+
+    $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+
+    $(document).ready(function () {
+        $('.scrollspy').scrollSpy();
+    });
+
+    $(document).ready(function () {
+        $('.carousel').carousel();
+    });
 })
