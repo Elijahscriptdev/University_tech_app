@@ -3,19 +3,19 @@
         <h3 class="center-align">Lets start your</h3>
         <h2 class="center-align">Software Development carrier</h2>
         <p class="center-align">How would you like to get started?</p>
-        <p class="center-align"><a class="waves-effect waves-light btn ">Contact us now</a></p>
+        <p class="center-align"><%= link_to "Signup Now", new_student_path, class:"waves-effect waves-light btn" %></p>
     </div>
-    <div class="herotext bg" id="second">
+    <div class=" herotext bg" id="second">
         <h3 class="center-align">Best Place For</h3>
         <h2 class="center-align">Software Engineering</h2>
         <p class="center-align">How would you like to get started?</p>
-        <p class="center-align"><a class="waves-effect waves-light btn ">Contact us now</a></p>
+        <p class="center-align"><%= link_to "Signup Now", new_student_path, class:"waves-effect waves-light btn" %></p>
     </div>
     <div class="herotext bg" id="third">
         <h3 class="center-align">Lets start your</h3>
         <h2 class="center-align">Software Development carrier</h2>
         <p class="center-align">How would you like to get started?</p>
-        <p class="center-align"><a class="waves-effect waves-light btn ">Contact us now</a></p>
+        <p class="center-align"><%= link_to "Signup Now", new_student_path, class:"waves-effect waves-light btn" %></p>
     </div>
 </div>
 <div class="center-align">
@@ -30,8 +30,8 @@
                 <span class="card-title ">Front-End Development</span>
             </div>
             <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                <p>Front-end web development, also known as client-side development is the practice of producing HTML,
+                    CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly.</p>
             </div>
             <div class="card-action">
                 <%= link_to "view courses", courses_path %>
@@ -45,8 +45,9 @@
                 <span class="card-title ">Back-End Development</span>
             </div>
             <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                <p>Backend development languages handle the ‘behind-the-scenes’ functionality of web applications.
+                    It’s code that connects the web to a database, manages user connections,
+                    and powers the web application itself.</p>
             </div>
             <div class="card-action">
                 <%= link_to "view courses", courses_path %>
@@ -60,8 +61,9 @@
                 <span class="card-title ">Fullstack Development</span>
             </div>
             <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                <p>Full-stack developers are experts in both the front-end and back-end;
+                    so, the full stack of technology that makes up a website.
+                    They are proficient in both front-end and back-end languages and frameworks.</p>
             </div>
             <div class="card-action">
                 <%= link_to "view courses", courses_path %>
