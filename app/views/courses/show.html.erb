@@ -1,0 +1,22 @@
+<main class="container">
+    <div class='row sign-up-form'>
+        <div class="col s6 m6 l6">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">
+                        Name: <%= @course.name %>
+                    </span>
+                    <p>
+                        Tools: <%= @course.short_name %>
+                    </p>
+                    <p>
+                        Description: <%= @course.description %>
+                    </p>
+                </div>
+            </div>
+            <%# if current_user == @student %>
+            <%= link_to '<i class="material-icons left">create</i>Edit Profile'.html_safe, edit_course_path(@course), class: "waves-effect waves-light btn" %>
+            <%# end %>
+        </div>
+    </div>
+</main>
