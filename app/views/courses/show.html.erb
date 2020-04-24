@@ -19,5 +19,18 @@
             <%= link_to '<i class="material-icons left">create</i>Edit Profile'.html_safe, edit_course_path(@course), class: "waves-effect waves-light btn" %>
             <% end %>
         </div>
+
+        <% if logged_in? && (current_user.courses.include?(@course)) %>
+        <%# <div class="row"> %>
+        <div class="col s6 m6 l6">
+            <div class="card-panel teal">
+                <span class="white-text">Thanks for enrolling in this course.
+                    Contents of this course will be uploaded very soon. Do well to inform your friendsto enroll.
+                </span>
+            </div>
+        </div>
+        <%# </div> %>
+        <% end %>
     </div>
+
 </main>
