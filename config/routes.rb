@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'login', to: 'logins#create'
   delete 'logout', to: 'logins#destroy'
   resources :students, except: [:destroy]
+  resources :courses
   get 'about', to: 'pages#about'
   get 'courses', to:'courses#index'
   root 'welcome#home'
