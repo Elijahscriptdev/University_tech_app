@@ -1,7 +1,8 @@
 class StudentsController < ApplicationController
     skip_before_action :require_user, only: [:new, :create]
     before_action :set_student, only: [:show, :edit, :update]
-    before_action :require_same_student, only: [:edit, :update]
+    before_action :require_same_student, only: [:edit, :update, :destroy]
+    before_action :require_admin, only: [:destroy]
 
     def index
         @students = Student.all
@@ -36,6 +37,13 @@ class StudentsController < ApplicationController
     def show
     end
 
+    def destroy
+        @student = Student.find(params[:id])
+        @student.destroy
+        flash[:success] = "Your profile was successfully deleted"
+        redirect_to students_path
+    end
+
     private
 
     def set_student
@@ -43,9 +51,16 @@ class StudentsController < ApplicationController
     end
 
     def require_same_student
-        if current_user != @student
+        if current_user != @student and !current_user.admin?
             flash[:success] = "You can only edit your own profile"
             redirect_to student_path(current_user)
+        end
+    end
+
+    def require_admin
+        if logged_in? and !current_user.admin?
+            flash[:success] = "Only admins can perform that action"
+            redirect_to root_path
         end
     end
 
