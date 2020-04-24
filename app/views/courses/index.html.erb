@@ -5,6 +5,10 @@
         </div>
     </div>
 
+
+    <% if logged_in? && current_user.admin? %>
+    <%= link_to  "Create New Courses", new_course_path %>
+    <% end %>
     <div class="row">
         <% @courses.each do |course| %>
         <div class="col s12 m6 ">

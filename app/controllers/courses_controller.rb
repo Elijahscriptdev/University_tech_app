@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
   skip_before_action :require_user
   before_action :set_student, only: [:show, :edit, :update]
   before_action :require_admin, except: [:show,:index]
-  before_action :require_same_student, only: [:new, :edit, :update, :destroy]
+#   before_action :require_same_student, only: [:create, :new, :edit, :update, :destroy]
   
   def index
     @courses = Course.all
@@ -58,12 +58,12 @@ class CoursesController < ApplicationController
         end
     end
 
-    def require_same_student
-        if current_user != !current_user.admin?
-            flash[:success] = "You cannot perform that action"
-            redirect_to root_path
-        end
-    end
+    # def require_same_student
+    #     if current_user != !current_user.admin?
+    #         flash[:success] = "You cannot perform that action"
+    #         redirect_to root_path
+    #     end
+    # end
 
     def course_params
         params.require(:course).permit(:name, :short_name, :description)
