@@ -3,19 +3,19 @@
         <h3 class="center-align">Lets start your</h3>
         <h2 class="center-align">Software Development carrier</h2>
         <p class="center-align">How would you like to get started?</p>
-        <p class="center-align"><a class="waves-effect waves-light btn ">Contact us now</a></p>
+        <p class="center-align"><%= link_to "Signup Now", new_student_path, class:"waves-effect waves-light btn" %></p>
     </div>
-    <div class="herotext bg" id="second">
+    <div class=" herotext bg" id="second">
         <h3 class="center-align">Best Place For</h3>
         <h2 class="center-align">Software Engineering</h2>
         <p class="center-align">How would you like to get started?</p>
-        <p class="center-align"><a class="waves-effect waves-light btn ">Contact us now</a></p>
+        <p class="center-align"><%= link_to "Signup Now", new_student_path, class:"waves-effect waves-light btn" %></p>
     </div>
     <div class="herotext bg" id="third">
         <h3 class="center-align">Lets start your</h3>
         <h2 class="center-align">Software Development carrier</h2>
         <p class="center-align">How would you like to get started?</p>
-        <p class="center-align"><a class="waves-effect waves-light btn ">Contact us now</a></p>
+        <p class="center-align"><%= link_to "Signup Now", new_student_path, class:"waves-effect waves-light btn" %></p>
     </div>
 </div>
 <div class="center-align">
@@ -30,11 +30,11 @@
                 <span class="card-title ">Front-End Development</span>
             </div>
             <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                <p>Front-end web development, also known as client-side development is the practice of producing HTML,
+                    CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly.</p>
             </div>
             <div class="card-action">
-                <a href="#">This is a link</a>
+                <%= link_to "view courses", courses_path %>
             </div>
         </div>
     </div>
@@ -45,11 +45,12 @@
                 <span class="card-title ">Back-End Development</span>
             </div>
             <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                <p>Backend development languages handle the ‘behind-the-scenes’ functionality of web applications.
+                    It’s code that connects the web to a database, manages user connections,
+                    and powers the web application itself.</p>
             </div>
             <div class="card-action">
-                <a href="#">This is a link</a>
+                <%= link_to "view courses", courses_path %>
             </div>
         </div>
     </div>
@@ -60,11 +61,12 @@
                 <span class="card-title ">Fullstack Development</span>
             </div>
             <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                <p>Full-stack developers are experts in both the front-end and back-end;
+                    so, the full stack of technology that makes up a website.
+                    They are proficient in both front-end and back-end languages and frameworks.</p>
             </div>
             <div class="card-action">
-                <a href="#">This is a link</a>
+                <%= link_to "view courses", courses_path %>
             </div>
         </div>
     </div>
@@ -77,35 +79,46 @@
 
     <div class="row">
         <h2 class="header center-align">Final Projects</h2>
-        <div class="card col s12 m6 l4">
-            <div class="card-image">
-                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587697047/FireShot_Capture_071_-_Enfant_-_School_and_Kindergarten_WordPress_Theme_by_zoutula_-_ThemeFo__-_themeforest.net_blaumx.png">
-                <span class="card-title ">Fullstack Development</span>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class=" card-image">
+                    <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587697047/FireShot_Capture_071_-_Enfant_-_School_and_Kindergarten_WordPress_Theme_by_zoutula_-_ThemeFo__-_themeforest.net_blaumx.png">
+                </div>
             </div>
         </div>
-        <div class="card col s12 m6 l4">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587697047/FireShot_Capture_069_-_Rythmo_-_School_of_Arts_Music_School_WordPress_Theme_by_ThemeREX__-_themeforest.net_ciu3kb.png">
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587697047/FireShot_Capture_069_-_Rythmo_-_School_of_Arts_Music_School_WordPress_Theme_by_ThemeREX__-_themeforest.net_ciu3kb.png">
+                </div>
             </div>
         </div>
-        <div class="card col s12 m6 l4">
-            <div class="card-image">
-                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587697047/FireShot_Capture_070_-_DreeveX_Driving_School_WordPress_Theme_by_Esmet_-_ThemeForest__-_themeforest.net_s8guo7.png">
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587697047/FireShot_Capture_070_-_DreeveX_Driving_School_WordPress_Theme_by_Esmet_-_ThemeForest__-_themeforest.net_s8guo7.png">
+                </div>
             </div>
         </div>
-        <div class="card col s12 m6 l4">
-            <div class="card-image ">
-                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587697047/FireShot_Capture_074_-_Chaos_-_Bag_Store_HTML5_Template_by_HasTech_-_ThemeForest_-_themeforest.net_wmcciy.png">
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image ">
+                    <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587697047/FireShot_Capture_074_-_Chaos_-_Bag_Store_HTML5_Template_by_HasTech_-_ThemeForest_-_themeforest.net_wmcciy.png">
+                </div>
             </div>
         </div>
-        <div class="card col s12 m6 l4">
-            <div class="card-image ">
-                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587699674/FireShot_Capture_075_-_Especio_-_Personal_Gutenberg_Food_Blog_WordPress_Theme_by_ThemeREX__-_themeforest.net_o3xml6.png">
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image ">
+                    <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587699674/FireShot_Capture_075_-_Especio_-_Personal_Gutenberg_Food_Blog_WordPress_Theme_by_ThemeREX__-_themeforest.net_o3xml6.png">
+                </div>
             </div>
         </div>
-        <div class="card col s12 m6 l4">
-            <div class="card-image ">
-                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587699685/FireShot_Capture_076_-_Julia_A_Steady_Food_Blog_WordPress_Theme_by_pixelgrade_-_ThemeFores__-_themeforest.net_kvuhev.png">
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image ">
+                    <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587699685/FireShot_Capture_076_-_Julia_A_Steady_Food_Blog_WordPress_Theme_by_pixelgrade_-_ThemeFores__-_themeforest.net_kvuhev.png">
+                </div>
             </div>
         </div>
     </div>

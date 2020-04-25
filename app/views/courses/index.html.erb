@@ -1,3 +1,16 @@
+<% flash.each do |key, message|%>
+<div class='container'>
+    <div class='row sign-up-form'>
+        <div class='col s12 m12 l12'>
+            <div class='card-panel green accent-1' id='fade-out-target'>
+                <span class='white-text'>
+                    <%= message %>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<% end %>
 <main class="container">
     <div class='row'>
         <div class='col s12'>
@@ -5,6 +18,10 @@
         </div>
     </div>
 
+
+    <% if logged_in? && current_user.admin? %>
+    <%= link_to  "Create New Courses", new_course_path %>
+    <% end %>
     <div class="row">
         <% @courses.each do |course| %>
         <div class="col s12 m6 ">

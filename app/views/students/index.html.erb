@@ -1,3 +1,16 @@
+<% flash.each do |key, message|%>
+<div class='container'>
+    <div class='row sign-up-form'>
+        <div class='col s12 m12 l12'>
+            <div class='card-panel green accent-1' id='fade-out-target'>
+                <span class='white-text'>
+                    <%= message %>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<% end %>
 <main class="container">
     <div class='row'>
         <div class='col s12'>
@@ -22,6 +35,10 @@
                 </div>
                 <div class="card-action">
                     <%= link_to  "View Profile", student_path(student) %>
+                    <% if logged_in? and current_user.admin? %>
+                    <%= link_to "Delete Student", student_path(student), method: :delete,
+                        data: { confirm: "Are you sure you want to delete this student" } %>
+                    <% end %>
                 </div>
             </div>
         </div>

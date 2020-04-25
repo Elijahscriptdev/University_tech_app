@@ -10,7 +10,7 @@
             <li><%= link_to  "Profile", student_path(current_user) %></li>
             <% else%>
             <li>
-                <%= link_to "Signin", new_student_path %>
+                <%= link_to "Signup", new_student_path %>
             </li>
             <% end %>
 
@@ -28,7 +28,7 @@
             <li><%= link_to  "Profile", student_path(current_user) %></li>
             <% else%>
             <li>
-                <%= link_to "Signin", new_student_path %>
+                <%= link_to "Signup", new_student_path %>
             </li>
             <% end %>
         </ul>
@@ -56,23 +56,11 @@
                     <li><%= link_to  "Courses", courses_path %></li>
                     <% if logged_in? %>
                     <li><%= link_to  "Students", students_path %></li>
+                    <%= "Admin" if current_user.admin? %>
                     <% end %>
+
                     <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
             </div>
         </nav>
-
-        <% flash.each do |key, message|%>
-        <div class='container'>
-            <div class='row sign-up-form'>
-                <div class='col s12 m12 l12'>
-                    <div class='card-panel red lighten-2' id='fade-out-target'>
-                        <span class='white-text'>
-                            <%= message %>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <% end %>
     </header>

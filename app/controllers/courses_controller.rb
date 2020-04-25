@@ -1,6 +1,8 @@
 class CoursesController < ApplicationController
   skip_before_action :require_user
   before_action :set_student, only: [:show, :edit, :update]
+  before_action :require_admin, except: [:show,:index]
+#   before_action :require_same_student, only: [:create, :new, :edit, :update, :destroy]
   
   def index
     @courses = Course.all
@@ -36,13 +38,34 @@ class CoursesController < ApplicationController
     def show
     end
 
+    def destroy
+        @course = Course.find(params[:id])
+        @course.destroy
+        flash[:success] = "Your course was successfully deleted"
+        redirect_to courses_path
+    end
+
     private
 
     def set_student
         @course = Course.find(params[:id])
     end
 
-  def course_params
+    def require_admin
+        if !logged_in? || (logged_in? and !current_user.admin?)
+            flash[:success] = "Only admins can perform that action"
+            redirect_to courses_path
+        end
+    end
+
+    # def require_same_student
+    #     if current_user != !current_user.admin?
+    #         flash[:success] = "You cannot perform that action"
+    #         redirect_to root_path
+    #     end
+    # end
+
+    def course_params
         params.require(:course).permit(:name, :short_name, :description)
     end
 end
