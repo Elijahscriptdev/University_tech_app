@@ -84,9 +84,6 @@ Contributions, issues and feature requests are welcome!
 
 Give a ⭐️ if you like this project!
 
-## Credits
-App UI Design idea by Nelson Sakwa on [Behance](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
-
 ## 📝 License
 
 This project is licensed under MIT license - see [LICENSE](/LICENSE) for more details.
