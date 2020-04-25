@@ -1,5 +1,7 @@
 @import "materialize";
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap');
+@import "font-awesome-sprockets";
+@import "font-awesome";
 // @import url(https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
 
 
@@ -151,4 +153,55 @@ body {
 .carousel-item img {
   height: 250px;
   width: 100%;
+}
+
+// ...................
+// nav ul a,
+// nav .brand-logo {
+//   color: #444;
+// }
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
 }

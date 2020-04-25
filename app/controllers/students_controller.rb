@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-    skip_before_action :require_user, only: [:new, :create]
+    skip_before_action :require_user
     before_action :set_student, only: [:show, :edit, :update]
     before_action :require_same_student, only: [:edit, :update, :destroy]
     before_action :require_admin, only: [:destroy]
@@ -15,8 +15,9 @@ class StudentsController < ApplicationController
     def create
         @student = Student.new(student_params)
         if @student.save
-            flash[:success] = "You have successfully signed up #{@student.name}"
-            redirect_to student_path(@student)
+            # flash[:success] = "You have successfully signed up #{@student.name}"
+            # redirect_to student_path(@student)
+            redirect_to login_path
         else
             render 'new'
         end
