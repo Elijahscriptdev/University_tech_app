@@ -30,7 +30,7 @@
                         <ul>
                             <% @student.courses.each do |course| %>
                             <li>
-                                <%= course.name %>
+                                <%= course.name %> | <%= link_to  "View course content", course_path(course) %>
                             </li>
                             <% end %>
                         </ul>

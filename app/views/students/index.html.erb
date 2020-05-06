@@ -30,7 +30,18 @@
                         Email: <%= student.email %>
                     </p>
                     <p>
-                        Course Enrollments: None
+                        Course Enrollments:
+                        <% if student.courses.empty? %>
+                        None
+                        <% else %>
+                        <ul>
+                            <% student.courses.each do |course| %>
+                            <li>
+                                <%= course.name %>
+                            </li>
+                            <% end %>
+                        </ul>
+                        <% end %>
                     </p>
                 </div>
                 <div class="card-action">

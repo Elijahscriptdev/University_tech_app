@@ -26,6 +26,11 @@
                         Description: <%= @course.description %>
                     </p>
                 </div>
+                <div class="card-action">
+                    <% if logged_in? && !(current_user.courses.include?(@course)) %>
+                    <%= link_to "Enroll", course_enroll_path(course_id: @course.id), method: :post %>
+                    <% end %>
+                </div>
             </div>
             <%# if logged_in? && !current_user.admin? %>
             <% if logged_in? && (current_user == @student || current_user.admin?) %>
