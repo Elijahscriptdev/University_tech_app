@@ -84,13 +84,13 @@ body {
 	}
   #first {
     // change duration here
-    animation: fade-first 14s linear infinite;
+    animation: fade-first 7s linear infinite;
   }
   #second {
-    animation: fade-second 14s linear infinite;
+    animation: fade-second 7s linear infinite;
   }
   #third {
-    animation: fade-third 14s linear infinite;
+    animation: fade-third 7s linear infinite;
   }
 }
 
@@ -99,7 +99,7 @@ body {
   3% {opacity:1; visibility:visible;}
   30% {opacity:1; visibility:visible;}
   33% {opacity:0; visibility:hidden;}
-  100% {opacity:0; visibility:hidden;}
+  100% {opacity:0; visibility:visible;}
 }
 
 @keyframes fade-second {
@@ -108,11 +108,11 @@ body {
   36% {opacity:1; visibility:visible;}
   63% {opacity:1; visibility:visible;}
   66% {opacity:0; visibility:hidden;}
-  100% {opacity:0; visibility:hidden;}
+  100% {opacity:0; visibility:visible;}
 }
 
 @keyframes fade-third {
-  0% {opacity:0; visibility:hidden;}
+  0% {opacity:0; visibility:visible;}
   66% {opacity:0; visibility:hidden;}
   69% {opacity:1; visibility:visible;}
   96% {opacity:1; visibility:visible;}
@@ -126,20 +126,20 @@ body {
   background-color: #eee;
   background-position: center;
   background-size: cover;
-  
+  background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1586111318/fookuvdhwf7eqf3pfgim.jpg');
   animation: image 8s infinite alternate;
 }
 
 @keyframes image {
-  0% {
-    background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587666427/men-working-at-night-256219_tus5xy.jpg');
-  }
-  60% {
-    background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1586111318/fookuvdhwf7eqf3pfgim.jpg');
-  }
-  100% {
-    background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584497691/austin-distel-uPK2TbJlvMQ-unsplash_pfgwwg.jpg');
-  }
+  // 0% {
+  //   background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587666427/men-working-at-night-256219_tus5xy.jpg');
+  // }
+  // 60% {
+  //   background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1586111318/fookuvdhwf7eqf3pfgim.jpg');
+  // }
+  // 100% {
+  //   background-image: url('https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584497691/austin-distel-uPK2TbJlvMQ-unsplash_pfgwwg.jpg');
+  // }
 }
 
 .parallax img {
