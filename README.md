@@ -15,6 +15,12 @@ This is a project built with Ruby on Rails where upcoming developers can login t
 - SASS
 - Materialise
 
+## Screenshots
+
+![Screenshots](https://res.cloudinary.com/elijjaaahhhh/image/upload/v1590586476/FireShot_Capture_115_-_TechClub_awifv8.png)
+
+![Screenshots](https://res.cloudinary.com/elijjaaahhhh/image/upload/v1590544566/FireShot_Capture_108_-_TechClub_-_schoolonlinenow.herokuapp.com_xhynj3.png)
+
 ## Deployment to heroku
 [Live link](https://schoolonlinenow.herokuapp.com/)
 
